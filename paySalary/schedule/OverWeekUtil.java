@@ -1,13 +1,14 @@
-package com.edu.study.payroll.schedule;
+package com.edu.study.paySalary.schedule;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.edu.study.payroll.domain.PaymentSchedule;
-import com.edu.study.payroll.util.DateUtil;
+import com.edu.study.paySalary.domain.PayDateUtil;
+import com.edu.study.paySalary.util.DateUtil;
 
 
-public class BiweeklySchedule implements PaymentSchedule {
+
+public class OverWeekUtil implements PayDateUtil {
 	Date firstPayableFriday = DateUtil.parseDate("2017-6-2");
 	
 	@Override
@@ -24,7 +25,7 @@ public class BiweeklySchedule implements PaymentSchedule {
 	}
 	
 	public static void main(String [] args) throws Exception{
-		BiweeklySchedule schedule = new BiweeklySchedule();
+		OverWeekUtil schedule = new OverWeekUtil();
 		
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 		Date d = sdf.parse("2017-06-30");

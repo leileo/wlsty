@@ -1,13 +1,17 @@
-package com.edu.study.payroll.afflication;
+package com.edu.study.paySalary.reduce;
 
 import java.util.Date;
 import java.util.Map;
 
-import com.edu.study.payroll.domain.Affiliation;
-import com.edu.study.payroll.domain.Paycheck;
-import com.edu.study.payroll.util.DateUtil;
+import com.edu.study.paySalary.domain.PayDetail;
+import com.edu.study.paySalary.util.DateUtil;
 
-public class UnionAffiliation implements Affiliation {
+/**
+ * 协会收取会员费用
+ * @author tery
+ *
+ */
+public class UnionReduce implements Reduce {
 
 	
 
@@ -20,7 +24,7 @@ public class UnionAffiliation implements Affiliation {
 	}
 	
 	@Override
-	public double calculateDeductions(Paycheck pc) {
+	public double calculateDeductions(PayDetail pc) {
 		double totalPay = 0;
 		for (ServiceCharge sc : serviceCharges.values()) {
 			if (DateUtil.between(sc.getDate(), pc.getPayPeriodStartDate(), pc.getPayPeriodEndDate())) {
@@ -35,8 +39,8 @@ public class UnionAffiliation implements Affiliation {
 	 * @param pc
 	 * @return
 	 */
-	private double calculatePayForWeeklyDue(Paycheck pc) {
-		int interval=(int) DateUtil.getDaysBetween( pc.getPayPeriodStartDate(),pc.getPayPeriodEndDate());
+	private double calculatePayForWeeklyDue(PayDetail detail) {
+		int interval=(int) DateUtil.getDaysBetween( detail.getPayPeriodStartDate(),detail.getPayPeriodEndDate());
 		return interval/7*weeklyDue;
 	}
 }

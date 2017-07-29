@@ -1,12 +1,13 @@
-package com.edu.study.payroll.schedule;
+package com.edu.study.paySalary.schedule;
 
 import java.util.Date;
 
-import com.edu.study.payroll.domain.PaymentSchedule;
-import com.edu.study.payroll.util.DateUtil;
+import com.edu.study.paySalary.domain.PayDateUtil;
+import com.edu.study.paySalary.util.DateUtil;
 
 
-public class WeeklySchedule implements PaymentSchedule {
+
+public class WeeklyUtil implements PayDateUtil {
 
 	@Override
 	public boolean isPayDate(Date date) {		

@@ -1,4 +1,4 @@
-package com.edu.study.payroll.domain;
+package com.edu.study.paySalary.domain;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.edu.study.payroll.util;
+package com.edu.study.paySalary.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

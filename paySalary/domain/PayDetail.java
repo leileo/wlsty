@@ -1,18 +1,18 @@
-package com.edu.study.payroll.domain;
+package com.edu.study.paySalary.domain;
 
 import java.util.Date;
 import java.util.Map;
 
-public class Paycheck {
-	private Date payPeriodStart;
-	private Date payPeriodEnd;
+public class PayDetail {
+	private Date start;
+	private Date end;
 	private double grossPay;//应付
 	private double netPay;//实发
 	private double deductions;//扣除
 	private Map<String, String> itsFields;
-	public Paycheck(Date payPeriodStart, Date payPeriodEnd){
-		this.payPeriodStart = payPeriodStart;
-		this.payPeriodEnd = payPeriodEnd;
+	public PayDetail(Date start, Date end){
+		this.start = start;
+		this.end = end;
 	}
 	public void setGrossPay(double grossPay) {
 		this.grossPay = grossPay;
@@ -26,10 +26,10 @@ public class Paycheck {
 	}
 	public Date getPayPeriodEndDate() {
 		
-		return this.payPeriodEnd;
+		return this.end;
 	}
 	public Date getPayPeriodStartDate() {
 		
-		return this.payPeriodStart;
+		return this.start;
 	}
 }

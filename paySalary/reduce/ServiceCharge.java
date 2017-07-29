@@ -1,7 +1,11 @@
-package com.edu.study.payroll.afflication;
+package com.edu.study.paySalary.reduce;
 
 import java.util.Date;
-
+/**
+ * 会员费用
+ * @author tery
+ *
+ */
 public class ServiceCharge {
 
 	private Date date;
